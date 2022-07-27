@@ -9,21 +9,21 @@ package com.tally.chain.core;
  */
 public interface IPayload {
 	
-	public byte[] serialize();
+	public String serialize();
 	
-	public void deserialize(byte[] data);
+	public void deserialize(String data);
 
 	public static IPayload genesisPayload() {
 		
 		return new IPayload() {
 			
 			@Override
-			public byte[] serialize() {
-				return new byte[0];
+			public String serialize() {
+				return "";
 			}
 			
 			@Override
-			public void deserialize(byte[] data) {
+			public void deserialize(String data) {
 			}
 		};
 	}
